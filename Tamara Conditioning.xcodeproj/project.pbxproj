@@ -12,6 +12,8 @@
 		492265D61EE080E8002B9807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492265D41EE080E8002B9807 /* Main.storyboard */; };
 		492265D81EE080E8002B9807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492265D71EE080E8002B9807 /* Assets.xcassets */; };
 		492265DB1EE080E8002B9807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492265D91EE080E8002B9807 /* LaunchScreen.storyboard */; };
+		49C6C45B1EE089B200977BEF /* IMCCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C6C4581EE089B200977BEF /* IMCCircleProgressView.m */; };
+		49C6C45C1EE089B200977BEF /* IMCShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C6C45A1EE089B200977BEF /* IMCShapeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		492265D71EE080E8002B9807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		492265DA1EE080E8002B9807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		492265DC1EE080E8002B9807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C6C4561EE089B100977BEF /* Tamara Conditioning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tamara Conditioning-Bridging-Header.h"; sourceTree = "<group>"; };
+		49C6C4571EE089B200977BEF /* IMCCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCCircleProgressView.h; sourceTree = "<group>"; };
+		49C6C4581EE089B200977BEF /* IMCCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCCircleProgressView.m; sourceTree = "<group>"; };
+		49C6C4591EE089B200977BEF /* IMCShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCShapeView.h; sourceTree = "<group>"; };
+		49C6C45A1EE089B200977BEF /* IMCShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCShapeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,14 @@
 				492265D01EE080E8002B9807 /* AppDelegate.swift */,
 				492265D21EE080E8002B9807 /* ViewController.swift */,
 				492265D41EE080E8002B9807 /* Main.storyboard */,
+				49C6C4571EE089B200977BEF /* IMCCircleProgressView.h */,
+				49C6C4581EE089B200977BEF /* IMCCircleProgressView.m */,
+				49C6C4591EE089B200977BEF /* IMCShapeView.h */,
+				49C6C45A1EE089B200977BEF /* IMCShapeView.m */,
 				492265D71EE080E8002B9807 /* Assets.xcassets */,
 				492265D91EE080E8002B9807 /* LaunchScreen.storyboard */,
 				492265DC1EE080E8002B9807 /* Info.plist */,
+				49C6C4561EE089B100977BEF /* Tamara Conditioning-Bridging-Header.h */,
 			);
 			path = "Tamara Conditioning";
 			sourceTree = "<group>";
@@ -96,6 +108,7 @@
 				TargetAttributes = {
 					492265CC1EE080E8002B9807 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				492265D31EE080E8002B9807 /* ViewController.swift in Sources */,
+				49C6C45B1EE089B200977BEF /* IMCCircleProgressView.m in Sources */,
+				49C6C45C1EE089B200977BEF /* IMCShapeView.m in Sources */,
 				492265D11EE080E8002B9807 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,11 +277,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Tamara Conditioning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FutureWorkshops.Tamara-Conditioning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tamara Conditioning/Tamara Conditioning-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -274,11 +293,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Tamara Conditioning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FutureWorkshops.Tamara-Conditioning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tamara Conditioning/Tamara Conditioning-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -301,6 +323,7 @@
 				492265E11EE080E8002B9807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
